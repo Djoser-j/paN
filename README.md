@@ -77,15 +77,15 @@ pa_gamma.bas
   
       ______________________________________________  
   
-Hensel, K., ['Über eine neue Begründung der Theorie der algebraischen Zahlen,' 1897](http://www.digizeitschriften.de/dms/resolveppn/?PID=GDZPPN00211612X)  
+Hensel, K., ['Über eine neue Begründung der Theorie der algebraischen Zahlen,'](http://www.digizeitschriften.de/dms/resolveppn/?PID=GDZPPN00211612X) 1897  
   
-Krishnamurthy et al., ['Finite segment p-adic number systems,' 1975](https://www.ias.ac.in/public/Volumes/seca/081/02/0058-0079.pdf)  
+Krishnamurthy et al., ['Finite segment p-adic number systems,'](https://www.ias.ac.in/public/Volumes/seca/081/02/0058-0079.pdf) 1975  
   
-Weger, B. de, ['Approximation lattices of p-adic numbers,' 1986](http://www.sciencedirect.com/science/article/pii/0022314X86900594/pdf)  
+Weger, B. de, ['Approximation lattices of p-adic numbers,'](http://www.sciencedirect.com/science/article/pii/0022314X86900594/pdf) 1986  
   
 Gouvêa, F., *p-adic Numbers - An introduction*, Springer-Verlag, 1997  
   
-Caruso, X., ['Computations with p-adic numbers,' (pp.1-31) 2017](https://hal.archives-ouvertes.fr/hal-01444183/document)  
+Caruso, X., ['Computations with p-adic numbers,'](https://hal.archives-ouvertes.fr/hal-01444183/document) (pp.1-31), 2017  
   
 [The FreeBASIC compiler](https://sourceforge.net/projects/fbc/files/)  
   
