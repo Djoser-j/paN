@@ -70,26 +70,22 @@ pa_gamma.bas
    
   
 #### Copyright:  
-        (C) 2020 Djoser.j.Spacher, All rights reserved  
+        (C) 2021 Djoser.j.Spacher, All rights reserved  
   
 #### License:  
         GNU General Public License, GPL  
   
       ______________________________________________  
   
-Hensel, K., ['Über eine neue Begründung der Theorie der algebraischen Zahlen,' 1897]
-(http://www.digizeitschriften.de/dms/resolveppn/?PID=GDZPPN00211612X)  
+Hensel, K., ['Über eine neue Begründung der Theorie der algebraischen Zahlen,' 1897](http://www.digizeitschriften.de/dms/resolveppn/?PID=GDZPPN00211612X)  
   
-Krishnamurthy et al., ['Finite segment p-adic number systems,' 1975]
-(https://www.ias.ac.in/public/Volumes/seca/081/02/0058-0079.pdf)  
+Krishnamurthy et al., ['Finite segment p-adic number systems,' 1975](https://www.ias.ac.in/public/Volumes/seca/081/02/0058-0079.pdf)  
   
-Weger, B. de, ['Approximation lattices of p-adic numbers,' 1986]
-(http://www.sciencedirect.com/science/article/pii/0022314X86900594/pdf)  
+Weger, B. de, ['Approximation lattices of p-adic numbers,' 1986](http://www.sciencedirect.com/science/article/pii/0022314X86900594/pdf)  
   
 Gouvêa, F., *p-adic Numbers - An introduction*, Springer-Verlag, 1997  
   
-Caruso, X., ['Computations with p-adic numbers,' (pp.1-31) 2017]
-(https://hal.archives-ouvertes.fr/hal-01444183/document)  
+Caruso, X., ['Computations with p-adic numbers,' (pp.1-31) 2017](https://hal.archives-ouvertes.fr/hal-01444183/document)  
   
 [The FreeBASIC compiler](https://sourceforge.net/projects/fbc/files/)  
   
