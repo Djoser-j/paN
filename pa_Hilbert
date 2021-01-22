@@ -1,0 +1,21 @@
+1 + O(2^1)
+1
+1 + O(2^4)
+2
+1 + O(2^15)
+3
+1 + O(2^30)
+4
+1 + O(2^57)
+5
+'rational approximation fails for Det order > 5
+'(1/186313420339200000 ... ref. OEIS A005249)
+1 + O(7^22)
+6
+1 + O(7^22)
+7
+1 + O(7^22)
+8
+'p-adic inversion goes well but rational approximation
+'fails for inverse Hilbert matrix of order > 8
+0
