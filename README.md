@@ -12,7 +12,6 @@ This file doubles as library documentation.
   
   
 Makefiles are in the **base directory**  
-(-W1ndows only, but easy to adapt):  
   
 1_make_pan_dll.bat  
 2_make_pa_demos.bat  
@@ -25,7 +24,7 @@ Makefiles are in the **base directory**
 #### paN\library\  
   
 pan_arith.bas  
-  p-adic number arithmetic realized in FreeBasic  
+  fixed point p-adic number arithmetic for FreeBasic  
   
 libpan_arith.dll.a  
   pan_arith import library  
@@ -51,14 +50,17 @@ pa_Hilbert.bas
   Inverting an order m Hilbert matrix  
   
 pa_roots.bas  
-  (p - 1)th roots of unity and square roots  
+   square roots and Teichmüller characters  
   
 pa_trans.bas  
   Transcendental functions: formal properties  
   (exp_p, log_p and binomial)  
   
 pa_twist.bas  
-  Twisting the binomial series  
+  p-adic interpolation: twisted binomial series  
+  
+pa_omega.bas  
+  p-adic omega constant: solve w * exp_p(w) = q  
   
 pa_gamma.bas  
   Morita's p-adic analogue of the gamma function  
@@ -88,4 +90,3 @@ Gouvêa, F., *p-adic Numbers - An introduction*, Springer-Verlag, 1997
 Caruso, X., ['Computations with p-adic numbers,'](https://hal.archives-ouvertes.fr/hal-01444183/document) (pp.1-31), 2017  
   
 [The FreeBASIC compiler](https://sourceforge.net/projects/fbc/files/)  
-  
