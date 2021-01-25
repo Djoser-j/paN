@@ -160,6 +160,7 @@ function padic.cpan (byref q as ratio,_
  byval sw as integer) as integer export
 dim as longint b1, a = q.a, b = q.b
 dim i as integer
+cpan = 0
 
    if b = 0 then return 1
    if a = 0 then return -1
@@ -211,35 +212,45 @@ dim i as integer
 end function
 
 'parse string of p-adic digits, set n = p
-sub padic.digits (byref g as string, byval n as long) export
-dim as const string tok = "0123456789 ."
-dim as integer i, t, sw = instr(g, ". ")
+function padic.digits (byref g as string,_
+ byval n as long) as integer export
+dim as const string tok = "'0123456789 ."
+dim as integer t, i, j = 0
 dim b as padic
+digits = 0
 
-   p = min(n, Pmax)
-   e = 0
+   n = min(n, Pmax)
+   if n > 1 then p = n
+   e = 1
    zero
 
-   g = "0 "+ trim(g)
+   g = trim(g)
+   if g = "" or g = "0" then
+      return 1
+   end if
+
    for i = 1 to len(g)
       t = instr(tok, mid(g, i, 1))
 
       select case t
       case 0
          continue for
-      case is < 11
+      case 1
+         'echo comment
+         print mid(g, i + 1)
+         return -1
+
+      case is < 12
          'build terms
          d(k) *= 10
-         d(k) += t - 1
-
-      case 11
-         k += 1
+         d(k) += t - 2
+         j = 1
 
       case else
          'valuation
-         v = k
-         'missing space
-         if sw = 0 then k += 1
+         if t = 13 then v = k
+         'next term
+         k += j: j = 0
       end select
 
       if k >= emx then exit for
@@ -264,7 +275,7 @@ dim b as padic
    'normalize
    b.k = k
    add(this, b)
-end sub
+end function
 
 'rational reconstruction
 function padic.crat (byval fl as integer) as ratio export
@@ -371,11 +382,10 @@ dim r as ratio
       end if
 
       if fl then
-         if t = 0 then
-            print x;"/";str(y)
-         else
-            print x;"/";str(y);" *";p;" ^";t
-         end if
+         print x;
+         if y > 1 then print "/";str(y);
+         if t then print " *";p;" ^";t;
+         print
       end if
    end if
 
@@ -578,7 +588,7 @@ end sub
 'let self:= a / b
 sub padic.div (byref a as padic, byref b as padic) export
 dim as long ptr ap, bp
-dim as longint b1, q, c, s
+dim as long b1, q, c, s
 dim as integer i, j
 dim as padic r, x = a, y = b
 with r
