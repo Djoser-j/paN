@@ -42,7 +42,7 @@ declare constructor ()
 
 declare function cpan (byref q as ratio, byval sw as integer) as integer
 'convert q = a/b to p-adic number, set sw to print
-declare sub digits (byref g as string, byval p as long)
+declare function digits (byref g as string, byval p as long) as integer
 'parse string of p-adic digits; canonicalize for p
 declare function crat (byval sw as integer) as ratio
 'return rational reconstruction, set sw to print

@@ -23,7 +23,7 @@ end function
 
 dim as double tim = timer
 dim as integer i, j, v0, fl, sw
-dim as padic h(1), a, b, u, v
+dim as padic h(1), a, b, u, v, w
 dim g as string, p as long
 width 64, 30
 cls
@@ -51,19 +51,23 @@ do
    fl = (i = 0 and a.d(0) = 1)
    if fl then
 
-      u.bino(a, b)
+      w.bino(a, b)
       print : ? "a ^ b"
-      u.printf(1)
+      w.printf(1)
+
+      u.logp(a)
+      v.mult(u, b)
+      v.expp(v)
+      print : ? "exp(log(a) * b)"
+      v.printf(1)
 
       v.inv(b)
       print : ? "1 / b"
       v.printf(1)
-      v.bino(u, v)
+      v.bino(w, v)
       print : ? "(a ^ b) ^ 1/b"
       v.printf(1)
 
-
-      u.logp(a)
       print : ? "log(a)"
       u.printf(0)
 

@@ -5,9 +5,9 @@
 #include "pan_lib.bi"
 #inclib "pan_arith"
 
-'--------------------------------------
-'Input: two strings of p-adic digits
-'separated by spaces, with primes p
+'----------------------------------------
+'Input: string of p-adic digits separated
+'by spaces, then a comma and prime p
 
 dim as padic a, b, c, u, v, h(1)
 dim g as string, p as long
@@ -18,16 +18,20 @@ cls
 print
 do
    for i = 0 to 1
-      input " p-adic digits and p"; g, p
-      sw = (g = "" or g = "0")
-      if sw or (p < 2) then exit do
-      h(i).digits(g, p)
-      'echo prime and precision
-      print "O(";str(getp);"^";str(h(i).k);")"
+      input " p-adic digits and ',' p"; g, p
+      sw = h(i).digits(g, p)
+      if sw = 1 then exit do
+      if sw then continue do
+
+      if i = 0 then
+         'echo prime and precision
+         print "O(";str(getp);"^";str(h(i).k);")"
+      end if
       h(i).printf(1)
    next i
    a = h(0)
    b = h(1)
+   p = getp
 
    u.add(a, b)
    print : ? "a + b"

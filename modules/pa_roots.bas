@@ -9,15 +9,15 @@
 'Input in 'big O' notation: -2/3 + O(7^9)
 
 dim as double tim = timer
-dim as integer i, sw, fl = -1
+dim g as string, p as long
+dim as integer i, sw
 dim as padic a, b, c
-dim g as string
-dim p as long
+
 width 64, 30
 cls
 
-'is 1-unit a ?
-#define Is1u(a) (a.d(0) = 1)
+'return true if a / p^vp(a) is a 1-unit
+#define Is1u(a) (a.d(a.v) = 1)
 
 setsw(1)
 
@@ -29,33 +29,36 @@ do
    if sw then continue do
    a.printf(0)
 
-   p = getp
-   if (p > 2) and not Is1u(a) then
-      print : ? "Teichmüller character for a"
-      'root of unity with r = a (mod p)
-      c.teichm(a)
+   c.sqrt(a)
+   if not Is0(c) then
+      print : ? "sqrt(a)"
       c.printf(0)
 
-      sw = not Is1(c)
-      sw and= p < 31
-      if fl and sw then
+      c.mult(c, c)
+      print : ? "sqrt(a) ^ 2"
+      c.printf(1)
+   end if
+   print
+
+   p = getp
+   if (p > 2) and not Is1u(a) then
+      c.teichm(a)
+      print : ? "Teichmüller character"
+     '(p-1)th root of unity with r = a / p^vp(a) (mod p)
+      c.printf(0)
+
+      sw = not Is1(c) and (p < 31)
+      if sw then
          b = c
+         print : ? "cycle"
          for i = 2 to p - 1
             b.mult(b, c)
-            print : ? "check";i
+            print i;":";
             b.printf(0)
+            if Is1(b) then exit for
          next i
       end if
-      print
    end if
-
-   c.sqrt(a)
-   print : ? "sqrt(a)"
-   c.printf(0)
-
-   c.mult(c, c)
-   print : ? "sqrt(a) ^ 2"
-   c.printf(1)
 
    print : ?
 loop
