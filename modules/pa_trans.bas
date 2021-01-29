@@ -93,12 +93,12 @@ do
       print : ? "exp(log(b))"
       u.printf(1)
 
-      print : ? "log(uv)"
+      print : ? "log(ab)"
       u.mult(a, b)
       u.logp(u)
       u.printf(0)
 
-      print : ? "log(u)+log(v)"
+      print : ? "log(a)+log(b)"
       u.logp(a)
       v.logp(b)
       v.add(u, v)
