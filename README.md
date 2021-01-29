@@ -7,6 +7,9 @@ The maximum precision is fixed at compile time,
 it's set as emx in include file \modules\pan_lib.bi  
 This file doubles as library documentation.  
   
+Rational reconstruction is done with  
+signed 64-bit integers, thus has a limited range.  
+  
   
 ### Contents of the paN packet  
   
