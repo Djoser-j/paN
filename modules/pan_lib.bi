@@ -9,7 +9,7 @@
 const emx = 68
 'exponent maximum
 
-const te = 20
+const te = 24
 'power-of-two argument maximum
 const amx = (1 shl (te + 1)) - 1
 
@@ -33,7 +33,8 @@ type ratio
 end type
 
 declare function parse (byref g as string) as ratio
-'parse input string
+'parse input string "a/b + O(p^e)":
+'fraction a/b with prime p and precision e
 declare sub reduce overload (byref a as long, byref b as long)
 'reduce rational a/b
 
