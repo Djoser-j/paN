@@ -68,6 +68,9 @@ pa_omega.bas
 pa_gamma.bas  
   Morita's p-adic analogue of the gamma function  
   
+pa_agM.bas  
+  p-adic arithmetic-geometric Mean  
+  
   
 #### paN\workdir\  
   Plain text input files  
