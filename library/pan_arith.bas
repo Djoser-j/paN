@@ -206,7 +206,8 @@ cpan = 0
       'next digit
       d(i) = a * b1 mod p
       if d(i) < 0 then d(i) += p
-      'now p divides a
+
+      'remainder - digit * divisor
       a -= d(i) * b
    loop while a
 end function
@@ -295,7 +296,7 @@ dim r as ratio
    'most significant digit
    t = vp
 
-   'R=>L power sum
+   'weighted digit sum
    s = 0: pk = 1
    for i = t to k - 1 + v
       p1 = pk: pk *= p
